@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script  src='js/script.js'></script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="text-resize">
+        <div class="minus"></div>
+        <div class="plus"></div>
+    </div>
+    <div class="content">
+        <h1>Lorem Ipsum</h1>
+        <h2>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+            "Acıyı seven, arayan ve ona sahip olmak isteyen hiç kimse yoktur. Nedeni basit. Çünkü o acıdır..."
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, urna vitae suscipit ultricies, erat nulla pretium velit, a eleifend metus sapien sit amet diam. Morbi tortor tellus, ornare vel lectus vitae, iaculis luctus arcu. Aenean ipsum velit, lobortis eu semper eu, ullamcorper vel lectus. Integer euismod sit amet nunc id mollis. Nam cursus urna eu orci fermentum, et suscipit enim euismod. In euismod, leo non aliquet luctus, nulla diam aliquet nisl, id mollis lorem nunc nec neque. Phasellus ornare sed ipsum vitae efficitur. Integer sed urna id neque condimentum bibendum ac a purus. Nam egestas dolor molestie porttitor tempor. Nam vestibulum tellus pharetra tortor mattis, at bibendum dui dictum. Quisque odio diam, rutrum scelerisque suscipit sit amet, vehicula nec turpis. Integer vel nunc augue. Suspendisse id sodales risus.
+        </p>
+    </div>
+</div>
+</body>
+
+<script>
+    var tMinus = $(".text-resize .minus"),
+        tPlus = $(".text-resize .plus"),
+        fontSizer = 16,
+        font = $(".content");
+
+    tPlus.click(function() {
+        if (fontSizer < 22){
+            fontSizer ++;
+            font.css("font-size" , fontSizer+"px" );
+        }
+    });
+    tMinus.click(function() {
+
+        if (fontSizer > 14){
+            fontSizer --;
+            font.css("font-size" , fontSizer+"px" );
+        }
+    });
+</script>
+</html>
